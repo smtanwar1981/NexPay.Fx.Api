@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "iTQLcIx48ptfwzRwa7j5bHsRXxLcsKMGSCjxtyINemk=",
+  "Source": "NexPay.Fx.Api",
+  "BasePath": "_content/NexPay.Fx.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

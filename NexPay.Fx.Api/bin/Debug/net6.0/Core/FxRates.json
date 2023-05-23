@@ -1,0 +1,129 @@
+{
+  "CurrencyExchange": [
+    {
+      "CurrencyCode": "AUD",
+      "ConversionRates": [
+        {
+          "ToCurrency": "AUD",
+          "Rate": "1.00"
+        },
+        {
+          "ToCurrency": "USD",
+          "Rate": "0.66"
+        },
+        {
+          "ToCurrency": "CAD",
+          "Rate": "0.90"
+        },
+        {
+          "ToCurrency": "GBP",
+          "Rate": "0.53"
+        },
+        {
+          "ToCurrency": "NZD",
+          "Rate": "1.14"
+        }
+      ]
+    },
+    {
+      "CurrencyCode": "USD",
+      "ConversionRates": [
+        {
+          "ToCurrency": "USD",
+          "Rate": "1.00"
+        },
+        {
+          "ToCurrency": "AUD",
+          "Rate": "1.50"
+        },
+        {
+          "ToCurrency": "CAD",
+          "Rate": "1.35"
+        },
+        {
+          "ToCurrency": "GBP",
+          "Rate": "0.80"
+        },
+        {
+          "ToCurrency": "NZD",
+          "Rate": "1.72"
+        }
+      ]
+    },
+    {
+      "CurrencyCode": "CAD",
+      "ConversionRates": [
+        {
+          "ToCurrency": "CAD",
+          "Rate": "1.00"
+        },
+        {
+          "ToCurrency": "AUD",
+          "Rate": "1.12"
+        },
+        {
+          "ToCurrency": "USD",
+          "Rate": "0.74"
+        },
+        {
+          "ToCurrency": "GBP",
+          "Rate": "0.60"
+        },
+        {
+          "ToCurrency": "NZD",
+          "Rate": "1.18"
+        }
+      ]
+    },
+    {
+      "CurrencyCode": "GBP",
+      "ConversionRates": [
+        {
+          "ToCurrency": "CAD",
+          "Rate": "1.68"
+        },
+        {
+          "ToCurrency": "AUD",
+          "Rate": "1.87"
+        },
+        {
+          "ToCurrency": "USD",
+          "Rate": "1.24"
+        },
+        {
+          "ToCurrency": "GBP",
+          "Rate": "1.00"
+        },
+        {
+          "ToCurrency": "NZD",
+          "Rate": "2.14"
+        }
+      ]
+    },
+    {
+      "CurrencyCode": "NZD",
+      "ConversionRates": [
+        {
+          "ToCurrency": "CAD",
+          "Rate": "0.18"
+        },
+        {
+          "ToCurrency": "AUD",
+          "Rate": "0.94"
+        },
+        {
+          "ToCurrency": "USD",
+          "Rate": "0.58"
+        },
+        {
+          "ToCurrency": "GBP",
+          "Rate": "0.47"
+        },
+        {
+          "ToCurrency": "NZD",
+          "Rate": "1.00"
+        }
+      ]
+    }
+  ]
+}
