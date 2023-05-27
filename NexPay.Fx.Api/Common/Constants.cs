@@ -3,6 +3,7 @@
     public class Constants
     {
         public const string ExchangeRateFilePath = "ExchangeRateFilePath";
+        public const string SupportedCurrenciesFilePath = "SupportedCurrenciesFilePath";
         public const string AUDCurrencyCode = "AUD";
         public const string USDCurrencyCode = "USD";
         public const string CADCurrencyCode = "CAD";

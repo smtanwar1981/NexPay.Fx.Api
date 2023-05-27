@@ -129,3 +129,4 @@ C:\tuts\NexPay\NexPay.Fx.Api\NexPay.Fx.Api.Test\obj\Debug\net6.0\refint\NexPay.F
 C:\tuts\NexPay\NexPay.Fx.Api\NexPay.Fx.Api.Test\obj\Debug\net6.0\NexPay.Fx.Api.Test.pdb
 C:\tuts\NexPay\NexPay.Fx.Api\NexPay.Fx.Api.Test\obj\Debug\net6.0\NexPay.Fx.Api.Test.genruntimeconfig.cache
 C:\tuts\NexPay\NexPay.Fx.Api\NexPay.Fx.Api.Test\obj\Debug\net6.0\ref\NexPay.Fx.Api.Test.dll
+C:\tuts\NexPay\NexPay.Fx.Api\NexPay.Fx.Api.Test\bin\Debug\net6.0\Core\SupportedCurrencies.json

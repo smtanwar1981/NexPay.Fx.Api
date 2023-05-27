@@ -48,6 +48,31 @@ namespace NexPay.Fx.Api.Service
             return conversionRate;
         }
 
+        /// <inheritdoc />
+        public async Task<SupportedCurrencies> GetSupportedCurrencies()
+        {
+            _logger.LogInformation("Begin Executing GetSupportedCurrencies() of FxService class");
+
+            SupportedCurrencies? supportedCurrencies = null;
+            var filePath = _configuration.GetValue<string>(Constants.SupportedCurrenciesFilePath);
+            if (File.Exists(filePath))
+            {
+                using (StreamReader content = new StreamReader(filePath))
+                {
+                    string json = await content.ReadToEndAsync();
+                    supportedCurrencies = JsonConvert.DeserializeObject<SupportedCurrencies>(json);
+                }
+            }
+            else
+            {
+                _logger.LogError("An error occurred while fetching supported currencies");
+                throw new FileNotFoundException();
+            }
+
+            _logger.LogInformation("End Executing GetSupportedCurrencies() of FxService class");
+            return supportedCurrencies;
+        }
+
         private async Task<Exchange>? GetExchangeRates()
         {
             Exchange? exchange = null;

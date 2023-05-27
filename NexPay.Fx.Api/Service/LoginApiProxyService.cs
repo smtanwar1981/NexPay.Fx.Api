@@ -11,6 +11,7 @@ namespace NexPay.Fx.Api.Service
             _configuration = configuration;
         }
 
+        /// <inheritdoc />
         public async Task<bool> AuthenticateRequest(string token)
         {
             using (var client = new HttpClient())

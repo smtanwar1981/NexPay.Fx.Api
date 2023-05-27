@@ -54,35 +54,5 @@ namespace NexPay.Fx.Api.Test.IntegrationTests
             var ex = await Assert.ThrowsAsync<Exception>(async () => await controller.GetCurrencyExchangeRate(request));
             Assert.True(ex.Message.Contains("Unauthorized access"));
         }
-
-        //[Fact]
-        //public async Task GetCurrencyExchangeRate_should_return_400_bad_request_when_CurrencyCodeFrom_is_empty_or_null()
-        //{
-        //    //arrange
-        //    string? token = "Bearer 12312";
-        //    var httpContext = new DefaultHttpContext();
-        //    httpContext.Request.Headers[HeaderNames.Authorization] = token;
-        //    GetExchangeRateRequest request = new GetExchangeRateRequest { CurrencyCodeFrom = String.Empty, CurrencyCodeTo = Constants.CADCurrencyCode };
-
-        //    decimal fxRate = Convert.ToDecimal(1.55);
-        //    _fxService.Setup(x => x.GetCurrencyExchangeRate(request))
-        //            .ReturnsAsync(await Task.FromResult(fxRate));
-        //    _loginApiProxyService.Setup(x => x.AuthenticateRequest(token)).ReturnsAsync(await Task.FromResult(true));
-        //    var controller = new FxController(_logger.Object, _fxService.Object, _loginApiProxyService.Object)
-        //    {
-        //        ControllerContext = new ControllerContext()
-        //        {
-        //            HttpContext = httpContext
-        //        }
-        //    };
-
-        //    // act
-        //    var result = await controller.GetCurrencyExchangeRate(request);
-        //    //var statusCodeResult = (IStatusCodeActionResult)result;
-
-        //    // assert
-        //    //Assert.True(result?.Exception?.Message.Contains("Unauthorized access"));
-        //    Assert.NotNull(result);
-        //}
     }
 }

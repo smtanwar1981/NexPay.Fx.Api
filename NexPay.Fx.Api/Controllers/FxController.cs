@@ -24,10 +24,12 @@ namespace NexPay.Fx.Api.Controllers
             _logger.LogInformation("Intialized SecurityController class");
         }
 
-        [HttpPost("getExchangeRate")]
+        [HttpGet("getExchangeRate")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(GetExchangeRateResponse))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<GetExchangeRateResponse>> GetCurrencyExchangeRate([FromBody] GetExchangeRateRequest request)
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<GetExchangeRateResponse>> GetCurrencyExchangeRate([FromQuery]GetExchangeRateRequest request)
         {
             _logger.LogInformation($"Begin executing GetCurrencyExchangeRate() of FxController class.");
 
@@ -54,6 +56,33 @@ namespace NexPay.Fx.Api.Controllers
                 _logger.LogInformation($"Conversion rate of currency FROM {request.CurrencyCodeFrom} to {request.CurrencyCodeTo} is - {response}");
 
                 _logger.LogInformation($"Finish executing GetCurrencyExchangeRate() of FxController class.");
+                return Ok(response);
+            }
+            else
+            {
+                throw new Exception("Unauthorized access.");
+            }
+        }
+
+        [HttpGet("getCurrencies")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(GetExchangeRateResponse))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult> GetCurrencies()
+        {
+            _logger.LogInformation($"Begin executing GetCurrencies() of FxController class.");
+
+            var _bearer_token = Request.Headers[HeaderNames.Authorization].ToString().Replace("Bearer ", "");
+            var isAuthenticated = await _loginApiProxyService.AuthenticateRequest(_bearer_token);
+
+            if (isAuthenticated)
+            {
+                var response = new SupportedCurrencies();
+
+                response = await _fxService.GetSupportedCurrencies();
+
+                _logger.LogInformation($"Finish executing GetCurrencies() of FxController class.");
                 return Ok(response);
             }
             else

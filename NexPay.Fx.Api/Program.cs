@@ -19,13 +19,6 @@ builder.Services.AddSwaggerGen(options =>
     SwaggerDefinition.AddSwaggerDefinition(options);
 });
 builder.Services.AddScoped<IFxService, FxService>();
-//builder.Services.AddAuthorization(options =>
-//{
-//    options.AddPolicy("SessionPolicy", policy =>
-//    {
-//        policy.Requirements.Add(new SessionRequirement("Authorization"));
-//    });
-//});
 
 var app = builder.Build();
 

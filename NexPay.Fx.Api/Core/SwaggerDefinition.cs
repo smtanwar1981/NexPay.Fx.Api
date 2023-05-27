@@ -11,7 +11,7 @@ namespace NexPay.Fx.Api.Core
             {
                 Version = "V1",
                 Title = "LoginApi",
-                Description = "NexPay Login Api"
+                Description = "NexPay Fx Api"
             });
             options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
             {
